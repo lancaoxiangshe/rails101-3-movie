@@ -29,7 +29,7 @@
           <% if @group.image.present? %>
             <%= image_tag(@group.image.medium.url, class: "mediumnail") %>
           <% else %>
-            <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "mediumnail") %>
+            <%= image_tag("http://placehold.it/400x800&text=No Pic", class: "mediumnail") %>
           <% end %>
       </div>
       <div class="details col-md-6">
@@ -42,8 +42,10 @@
 </div>
 </div>
 
-  <table class="table">
-    <thead>
+<br>
+
+  <table class="table" width="100%">
+    <col width="70%"><col width="15%"><col width="15%">
       <tr>
         <th>Review</th>
         <th>Creator</th>

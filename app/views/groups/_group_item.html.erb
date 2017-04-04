@@ -3,15 +3,15 @@
   <td>
     <%= link_to group_path(group) do %>
       <% if group.image.present? %>
-        <%= image_tag(group.image.thumb.url, class: "thumbnail")%>
+        <%= image_tag(group.image.thumb.url, resize_to_fit:[100,150], class: "thumbnail")%>
       <% else %>
-        <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+        <%= image_tag("http://placehold.it/200x600&text=No Pic", class: "thumbnail") %>
       <% end %>
     <% end %>
   </td>
-  <td><%= link_to(group.title, group_path(group)) %></td>
-  <td><%= render_group_description(group) %></td>
-  <td><%= group.user.email %></td>
+  <td valign="middle"><%= link_to(group.title, group_path(group)) %></td>
+  <td valign="middle"><%= render_group_description(group) %></td>
+  <td valign="middle"><%= group.user.email %></td>
   <td>
       <% if current_user && current_user == group.user %>
           <%= link_to("Edit", edit_group_path(group), class: "btn btn-sm btn-default") %>
