@@ -3,7 +3,7 @@
   <td>
     <%= link_to group_path(group) do %>
       <% if group.image.present? %>
-        <%= image_tag(group.image.thumb.url, resize_to_fit:[100,150], class: "thumbnail")%>
+        <%= image_tag(group.image.thumb.url, class: "thumbnail")%>
       <% else %>
         <%= image_tag("http://placehold.it/200x600&text=No Pic", class: "thumbnail") %>
       <% end %>
